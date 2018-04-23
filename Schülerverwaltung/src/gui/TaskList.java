@@ -13,13 +13,17 @@ import javax.swing.*;
 
 import bll.Task;
 
-public class MenuList extends JPanel{
+public class TaskList extends JPanel{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9119216342461015562L;
 	private JList<Task> listTasks = null;
 	private JScrollPane scrollpane = null;
 	private MouseListener parent = null;
 	private DefaultListModel<Task> dml;
 	
-	public MenuList(MouseListener parent) {
+	public TaskList(MouseListener parent) {
 		this.parent = parent;
 		this.initializeControls();
 	}

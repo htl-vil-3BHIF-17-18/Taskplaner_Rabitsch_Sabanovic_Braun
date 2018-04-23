@@ -18,8 +18,12 @@ import javax.swing.JTextField;
 import bll.Task;
 
 public class MainFrame extends JFrame implements ActionListener, MouseListener{
-	public MenuList listMenu = null;
-	public MenuList list = null;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5164125500666934784L;
+	public TaskList listMenu = null;
+	public TaskList list = null;
 	private JButton bestätigen = null;
 	private JButton hinzufügen = null;
 	private JButton ändern = null;
@@ -42,7 +46,7 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener{
 	
 	
 	private void initializeControls() {
-		this.list = new MenuList(this);
+		this.list = new TaskList(this);
 		this.bestätigen = new JButton("Eingaben bestätigen");
 		this.bestätigen.addActionListener(this);
 		this.hinzufügen = new JButton("Eintrag hinzufügen");
@@ -70,17 +74,22 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener{
 		this.buttons.add(ändern);
 		this.buttons.add(löschen);
 		this.add(buttons);
+		this.startDate.setEnabled(false);
+		this.endDate.setEnabled(false);
+		this.filter.setEnabled(false);
 	}
 
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		// TODO 
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource().equals(this.bestätigen)) {
+		//	this.list.add()
+		}
 		
 	}
 	
 	@Override
-	public void mouseClicked(MouseEvent arg0) {
-		// TODO 
+	public void mouseClicked(MouseEvent e) {
+		//ToDO
 		
 	}
 
