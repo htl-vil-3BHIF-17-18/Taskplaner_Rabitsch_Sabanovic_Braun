@@ -3,7 +3,6 @@ package gui;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -63,7 +62,7 @@ public class MainFrame extends JFrame implements ActionListener, MouseListener{
 		this.filter.addActionListener(this);
 		
 		this.setLayout(new BorderLayout());
-		this.add(this.list, BorderLayout.LINE_START);
+		this.add(this.list, BorderLayout.LINE_END);
 		this.buttons = new JPanel();
 		this.buttons.setLayout(new GridLayout(7,1));
 		this.buttons.add(startDate, BorderLayout.NORTH);

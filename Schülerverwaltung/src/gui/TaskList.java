@@ -40,7 +40,7 @@ public class TaskList extends JPanel{
 		this.listTasks.addMouseListener(parent);
 		
 		this.listTasks.setModel(dml);
-		this.add(this.scrollpane, BorderLayout.LINE_START);
+		this.add(this.scrollpane, BorderLayout.LINE_END);
 		this.setVisible(true);
 	}
 	
